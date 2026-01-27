@@ -1,48 +1,83 @@
 // Données centralisées pour le site
 
-// Événements du calendrier
 const calendarEvents = [
     {
-        date: "12 Janvier 2026",
-        title: "Lancement officiel de la campagne",
-        description: "Début de la période de campagne électorale pour tous les postes à pourvoir."
+        date: "12 - 16 Janvier 2026",
+        title: "Dépôt des candidatures",
+        description: "Période officielle de dépôt des candidatures pour les différents postes du comité culturel."
     },
     {
-        date: "15 Janvier 2026",
-        title: "Dépôt des candidatures",
-        description: "Date limite pour le dépôt des candidatures pour tous les postes électifs."
+        date: "19 - 21 Janvier 2026",
+        title: "Formation des cartels",
+        description: "Organisation des groupes (cartels) et structuration des équipes autour des projets culturels."
     },
     {
         date: "22 Janvier 2026",
-        title: "Débats des candidats",
-        description: "Ouverture officielle de campagne pour les candidats"
+        title: "Présentation des candidats",
+        description: "Présentation officielle des candidats et de leurs visions culturelles à l’ensemble de l’équipe."
     },
     {
-        date: "23 au 30 Janvier 2026",
-        title: "Campagne électorale",
-        description: "Campagne électorale."
+        date: "23 - 26 Janvier 2026",
+        title: "Présentation des plans d’actions culturels",
+        description: "Présentation des projets, activités et orientations culturelles proposées par chaque cartel."
     },
     {
-        date: "Semaine 6 Février 2026",
-        title: "Débats",
-        description: "Débats entre les présidents, accompagnés de leurs cartels."
+        date: "Semaine du 26 Janvier 2026",
+        title: "Ouverture officielle de la campagne culturelle",
+        description: "Début officiel de la campagne de promotion des projets culturels."
+    },
+    {
+        date: "26 Janvier 2026",
+        title: "Présentation du cartel Force Majeure",
+        description: "Rencontre culturelle et présentation du projet du cartel Force Majeure avec toute l’équipe."
+    },
+    {
+        date: "27 Janvier 2026",
+        title: "Présentation du cartel Sperc",
+        description: "Présentation du projet culturel et des membres du cartel Sperc."
+    },
+    {
+        date: "28 Janvier 2026",
+        title: "Présentation du Comité Joie et Amour",
+        description: "Présentation des initiatives culturelles portées par le Comité Joie et Amour."
+    },
+    {
+        date: "29 Janvier 2026",
+        title: "Présentation du cartel Intrépide",
+        description: "Présentation des projets et de la vision culturelle du cartel Intrépide."
+    },
+    {
+        date: "30 Janvier 2026",
+        title: "Présentation du cartel Dévlopman ak Lajwa",
+        description: "Présentation du programme culturel du cartel Dévlopman ak Lajwa."
+    },
+    {
+        date: "Semaine du 6 Février 2026",
+        title: "Rencontres et échanges culturels",
+        description: "Échanges entre les responsables des cartels autour des projets culturels proposés."
     },
     {
         date: "9 Février 2026",
-        title: "Journée d'élections et Annonce des résultats",
-        description: "Journée d'élection et Publication officielle des résultats des élections pour tous les postes."
+        title: "Journée électorale",
+        description: "Vote pour l’élection des membres du comité culturel."
     },
     {
         date: "11 Février 2026",
-        title: "Journée d'élections et Annonce des résultats",
-        description: "Journée d'élection (Possible 2e tour élection présidentielle) et Publication officielle des résultats."
+        title: "Journée électorale (si 2ᵉ tour)",
+        description: "Deuxième tour du vote si nécessaire, notamment pour la présidence du comité culturel."
+    },
+    {
+        date: "11 - 15 Février 2026",
+        title: "Période de transition",
+        description: "Passation entre l’ancien et le nouveau comité culturel."
     },
     {
         date: "16 Février 2026",
-        title: "Cérémonie d'investiture",
-        description: "Cérémonie officielle d'investiture des élus pour un mandat de 2 ans."
+        title: "Cérémonie d’investiture",
+        description: "Installation officielle du nouveau comité culturel."
     }
 ];
+
 
 // Données des candidats
 const candidatesData = [
@@ -471,4 +506,5 @@ const positionsTable = [
 ];
 
 // Exporter les données
+
 export { calendarEvents, candidatesData, positionsTable };
