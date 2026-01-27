@@ -19,7 +19,7 @@ const calendarEvents = [
     {
         date: "23 - 26 Janvier 2026",
         title: "Présentation des plans d’actions culturels",
-        description: "Présentation des projets, activités et orientations culturelles proposées par chaque cartel."
+        description: "Présentation à l'administration des projets, activités et orientations culturelles proposées par chaque cartel."
     },
     {
         date: "Semaine du 26 Janvier 2026",
@@ -38,7 +38,7 @@ const calendarEvents = [
     },
     {
         date: "28 Janvier 2026",
-        title: "Présentation du Comité Joie et Amour",
+        title: "Présentation du Comité Joie et D Amour",
         description: "Présentation des initiatives culturelles portées par le Comité Joie et Amour."
     },
     {
@@ -54,7 +54,7 @@ const calendarEvents = [
     {
         date: "Semaine du 6 Février 2026",
         title: "Rencontres et échanges culturels",
-        description: "Échanges entre les responsables des cartels autour des projets culturels proposés."
+        description: "Débats entre les Présidents des cartels autour des projets culturels proposés."
     },
     {
         date: "9 Février 2026",
@@ -508,3 +508,4 @@ const positionsTable = [
 // Exporter les données
 
 export { calendarEvents, candidatesData, positionsTable };
+
