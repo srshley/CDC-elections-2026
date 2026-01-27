@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politique Générale - CDC Élections 2026</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/politique.css">
+
+    <script type="module">
+        // Import the same components as index.html
+        import { initializePage, candidatesData } from './js/components.js';
+        import { initializePolitiquePage } from './js/politique-module.js';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initializePage('politique');          // same as index
+            initializePolitiquePage(candidatesData);  // your politique module
+        });
+    </script>
+</head>
+<body>
+    <!-- Header injected by JS -->
+
+    <!-- Hero Section -->
+    <section class="politique-hero" id="home">
+        <div class="container">
+            <h1>Politiques Générales des Cartels</h1>
+            <p>Consultez les programmes, visions et propositions de chaque cartel pour les élections CDC 2026.</p>
+            <div class="hero-buttons">
+                <a href="#filter-cartels" class="btn btn-primary">Filtrer par cartel</a>
+                <a href="candidates.html" class="btn btn-secondary">Voir les candidats</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section id="filter-cartels" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Filtrer les Cartels</h2>
+            <p class="section-subtitle">Sélectionnez un cartel pour consulter sa politique générale</p>
+            
+            <div class="filter-group">
+                <h3>Filtrer par Cartel</h3>
+                <div class="filter-buttons" id="cartelFilter">
+                    <button class="filter-btn active" data-filter="all">Tous les cartels</button>
+                    <button class="filter-btn" data-filter="Cartel KDL">Cartel KDL</button>
+                    <button class="filter-btn" data-filter="Cartel Comité de joie et d'amour">Comité de Joie et d'amour</button>
+                    <button class="filter-btn" data-filter="Cartel Sperc">Cartel Sperc</button>
+                    <button class="filter-btn" data-filter="Cartel Force">Force Majeure</button>
+                    <button class="filter-btn" data-filter="Cartel INTREPIDE">Cartel INTREPIDE</button>
+                    <button class="filter-btn" data-filter="Independent">Independent</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cartels Grid -->
+    <section id="cartels-grid" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title">Liste des Cartels</h2>
+            <p class="section-subtitle">Cliquez sur un cartel pour afficher sa politique générale</p>
+            
+            <div class="cartels-container" id="cartelsList">
+                <!-- Loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Document Viewer -->
+    <section id="document-viewer" class="section-padding">
+        <div class="container">
+            <div class="document-viewer-section">
+                <div class="viewer-header">
+                    <h2 id="currentCartelTitle">Sélectionnez un cartel pour afficher son programme</h2>
+                    <div class="viewer-controls">
+                        <div class="document-info" id="documentInfo">
+                            <span class="document-size" id="documentSize">--</span>
+                            <span class="document-pages" id="documentPages">-- pages</span>
+                        </div>
+                        <div class="viewer-actions">
+                            <button class="btn btn-secondary" id="downloadBtn" disabled>
+                                <i class="fas fa-download"></i> Télécharger
+                            </button>
+                            <button class="btn btn-secondary" id="fullscreenBtn" disabled>
+                                <i class="fas fa-expand"></i> Plein écran
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="document-container">
+                    <div class="document-viewer" id="documentViewer">
+                        <iframe id="pdfFrame" style="width: 100%; height: 600px; border: none; display: none;"></iframe>
+                        <div class="no-document-selected" id="noDocument">
+                            <i class="fas fa-file-alt"></i>
+                            <h3>Aucun document sélectionné</h3>
+                            <p>Sélectionnez un cartel dans la liste ci-dessus pour afficher son programme.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Document Details -->
+                <div class="document-details" id="documentDetails" style="display: none;">
+                    <h3>À propos de ce document</h3>
+                    <div class="details-grid" id="detailsContent">
+                        <!-- Loaded dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fullscreen Modal -->
+    <div class="fullscreen-modal" id="fullscreenModal">
+        <div class="fullscreen-header">
+            <h3 id="fullscreenTitle">Document en plein écran</h3>
+            <button class="close-fullscreen" id="closeFullscreenBtn">
+                <i class="fas fa-times"></i> Fermer
+            </button>
+        </div>
+        <div class="fullscreen-content">
+            <iframe id="fullscreenFrame" style="width: 100%; height: 100%; border: none;"></iframe>
+        </div>
+    </div>
+
+    <!-- Footer injected by JS -->
+</body>
+</html>

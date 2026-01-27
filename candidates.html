@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidats - CDC Élections 2026</title>
+
+    <!-- Icons & Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/candidates.css">
+
+    <!-- Scripts -->
+    <script type="module">
+        import { initializePage } from './js/components.js';
+        import { initializeCandidatesPage } from './js/candidates-module.js';
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            initializePage('candidates');
+            initializeCandidatesPage();
+        });
+    </script>
+</head>
+
+<body>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+    <div class="container">
+        <h1>Tous les Candidats</h1>
+        <p>
+            Découvrez les candidats pour chaque poste.
+            Utilisez les filtres pour affiner votre recherche.
+        </p>
+        <div class="hero-buttons">
+            <button id="toggleFilters" class="btn btn-primary">
+                <i class="fas fa-filter"></i> Afficher/Masquer les filtres
+            </button>
+            <a href="index.html#positions" class="btn btn-secondary">
+                <i class="fas fa-arrow-left"></i> Retour à l'accueil
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ================= MAIN CONTENT ================= -->
+<div class="container main-candidates-container">
+    <div class="candidates-layout">
+        
+        <!-- ================= FILTRES (SIDEBAR) ================= -->
+        <aside class="filters-sidebar" id="filtersSidebar">
+            <div class="filters-header">
+                <h2><i class="fas fa-filter"></i> Filtres</h2>
+                <button class="close-filters-btn" id="closeFilters">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="filters-content">
+                <!-- Cartel -->
+                <div class="filter-group">
+                    <h3><i class="fas fa-flag"></i> Par cartel</h3>
+                    <div class="filter-options" id="cartelFilters">
+                        <!-- Généré automatiquement -->
+                    </div>
+                </div>
+
+                <!-- Poste -->
+                <div class="filter-group">
+                    <h3><i class="fas fa-briefcase"></i> Par poste</h3>
+                    <div class="filter-options" id="positionFilters">
+                        <!-- Généré automatiquement -->
+                    </div>
+                </div>
+
+                <!-- Numéro -->
+                <div class="filter-group">
+                    <h3><i class="fas fa-hashtag"></i> Par numéro</h3>
+                    <div class="filter-options" id="numeroFilters">
+                        <!-- Généré automatiquement -->
+                    </div>
+                </div>
+
+                <!-- Équipe -->
+                <div class="filter-group">
+                    <h3><i class="fas fa-users"></i> Par équipe</h3>
+                    <div class="filter-options" id="teamFilters">
+                        <!-- Généré automatiquement -->
+                    </div>
+                </div>
+
+                <!-- Bouton pour réinitialiser tous les filtres -->
+                <div class="filter-reset">
+                    <button id="resetAllFilters" class="btn btn-secondary">
+                        <i class="fas fa-sync-alt"></i> Réinitialiser tous les filtres
+                    </button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ================= CONTENU PRINCIPAL ================= -->
+        <main class="candidates-main">
+            <!-- Info bar -->
+            <div class="info-bar">
+                <div id="activeFilters" class="active-filters-container"></div>
+                <div class="info-right">
+                    <div id="candidateCount" class="candidate-count"></div>
+                    <button class="btn btn-outline" id="mobileToggleFilters">
+                        <i class="fas fa-filter"></i> Filtres
+                    </button>
+                </div>
+            </div>
+
+            <!-- Liste des candidats -->
+            <div class="candidates-container" id="candidatesList">
+                <!-- Cartes générées dynamiquement -->
+            </div>
+        </main>
+    </div>
+</div>
+
+<!-- ================= MODAL ================= -->
+<div class="modal" id="candidateModal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-body" id="modalBody">
+            <!-- Contenu dynamique -->
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

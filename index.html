@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDC Élections 2026 - Plateforme électorale officielle</title>
+    
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script type="module">
+        // Import des composants
+        import { initializePage } from './js/components.js';
+        
+        // Initialiser la page lorsque le DOM est chargé
+        document.addEventListener('DOMContentLoaded', () => {
+            initializePage('index');
+        });
+    </script>
+</head>
+<body>
+    <!-- Le header sera injecté par JavaScript -->
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero__container">
+            <h1 class="hero__title">
+                <span class="text-gradient">CDC Élections 2026</span>
+            </h1>
+            <p class="hero__description">
+                Plateforme officielle d'information sur les élections du comité culturel. 
+                Consultez le calendrier électoral et découvrez les candidats pour chaque poste à pourvoir.
+            </p>
+            <div class="hero__actions">
+                <a href="#calendar" class="btn btn--accent">
+                    <i class="fas fa-calendar-alt"></i>
+                    Voir le calendrier
+                </a>
+                <a href="#positions" class="btn btn--secondary">
+                    <i class="fas fa-users"></i>
+                    Découvrir les candidats
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calendar Section -->
+    <section class="calendar-section section" id="calendar">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title fade-in">Calendrier Électoral</h2>
+                <p class="section-subtitle fade-in">
+                    Suivez toutes les étapes du processus électoral et les événements importants
+                </p>
+            </div>
+            <div class="calendar-container fade-in">
+                <!-- Le calendrier sera généré par JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <hr class="divider">
+
+    <!-- Positions & Candidates Section -->
+    <section class="candidates-section section" id="positions">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title fade-in">Postes à pourvoir et Candidats</h2>
+                <p class="section-subtitle fade-in">
+                    Découvrez les postes disponibles et les candidats qui se présentent aux élections 2026
+                </p>
+            </div>
+            <div class="positions-container fade-in">
+                <!-- La table sera générée par JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Le footer sera injecté par JavaScript -->
+</body>
+</html>
